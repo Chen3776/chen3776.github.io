@@ -21,26 +21,32 @@ p { margin: 0 0 10px; }
 .profile { margin-bottom: 34px; }
 .profile:has(.portrait-slot:not([hidden])) { display: grid; grid-template-columns: minmax(0, 1fr) 156px; gap: 38px; align-items: center; }
 h1 { margin: 0 0 13px; color: #17191a; font-size: 31.2px; font-weight: 700; line-height: 1.15; }
+h1 span { display: inline-block; margin-left: 6px; font-size: 0.76em; font-weight: 400; }
 .biography { line-height: 1.54; }
 .contact { margin: 14px 0 0; font-family: var(--sans); font-size: 14.72px; line-height: 1.55; }
-.portrait-slot img { display: block; width: 156px; height: 156px; object-fit: cover; border: 1px solid #e5e4df; border-radius: 7px; }
+.portrait-slot img { display: block; width: 156px; height: 200px; object-fit: cover; object-position: center 35%; border: 1px solid #e5e4df; border-radius: 7px; }
 h2 { display: flex; align-items: center; gap: 10px; margin: 42px 0 18px; color: #17191a; font-family: var(--sans); font-size: 16px; font-weight: 700; line-height: 1.4; text-transform: uppercase; }
 h2::before { content: ""; flex: 0 0 4px; width: 4px; height: 1.05em; background: var(--accent); border-radius: 2px; }
 .news-list { min-height: 52px; }
 .research-list { min-height: 100px; }
 footer { margin: 44px 0 26px; color: var(--muted); font-family: var(--sans); font-size: 12px; }
 
-/* 添加真实内容后可使用的列表样式。空白页面不显示示例条目。 */
+/* 按年份组织动态，并使用轻量的论文列表。 */
 .news-group { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 16px; margin-bottom: 18px; padding-left: 18px; border-left: 1px solid #e3e7e4; }
 .news-year { color: var(--muted); font: 600 12px/1.8 ui-monospace, Consolas, monospace; }
 .news-group ul { margin: 0; padding-left: 14px; font-size: 15.04px; line-height: 1.58; }
 .news-group li { margin-bottom: 5px; }
 .news-group li::marker { color: #bcc6c3; }
+.news-group a { text-decoration: underline; text-underline-offset: 3px; }
 .research-year { margin: 22px 0 10px; font: 700 13.76px/1.5 var(--sans); }
 .publication { margin: 0 0 15px; padding: 9px 0 10px 14px; border-left: 2px solid #dce4e4; }
-.publication h3 { margin: 0 0 5px; font-size: 16.32px; line-height: 1.34; }
+.publication h4 { margin: 0 0 5px; font-size: 16.32px; line-height: 1.34; }
 .publication p { margin: 0 0 5px; color: var(--muted); font: 14.08px/1.42 var(--sans); }
 .publication .venue { color: #8f3f31; font-style: italic; }
+.publication strong { color: #343a3c; }
+.publication .description { margin-top: 7px; color: #42494b; line-height: 1.55; }
+.publication .paper-links { margin-top: 8px; font-size: 13px; }
+.author-note { display: inline-block; margin-left: 16px; font-size: 12px; }
 .profile-text, .publication { min-width: 0; overflow-wrap: anywhere; }
 
 @media (max-width: 600px) {
@@ -49,6 +55,6 @@ footer { margin: 44px 0 26px; color: var(--muted); font-family: var(--sans); fon
   h1 { font-size: 27.52px; }
   .profile:has(.portrait-slot:not([hidden])) { display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
   .portrait-slot { order: -1; }
-  .portrait-slot img { width: 128px; height: 128px; }
+  .portrait-slot img { width: 128px; height: 164px; }
   .news-group { grid-template-columns: 52px minmax(0, 1fr); gap: 10px; }
 }

@@ -1,55 +1,34 @@
-# Chen3776 的个人主页
+# Pengyi Chen 的个人主页
 
 站点：[chen3776.github.io](https://chen3776.github.io/)
 
-参考用户提供的 [Feng Hong 学术主页](https://feng-hong.github.io/research/) 的简洁排版：浅色背景、衬线正文、居中窄版、News 与 Research 两个分节。没有复制参考网站的文字、照片或论文内容。
+沿用简洁的学术主页排版：个人简介与照片、News、Research。页面仅使用 HTML 和 CSS，无脚本、外部字体或构建依赖。
 
-目前保留昵称与 GitHub 链接，个人简介、照片、动态和研究内容均留空。页面仅使用 HTML 和 CSS，无脚本、外部字体或构建依赖。
+## 内容维护
 
-## 修改内容
+直接编辑 `index.html`：
 
-直接编辑 `index.html` 即可，文件中已标注各内容位置：
+- `profile`：姓名、简介、教育经历、实习经历、邮箱和 GitHub。
+- `news-list`：按年份分组的动态。
+- `research-list`：在投稿件、已发表论文和参与项目。
+- `footer`：最后更新时间。
 
-- `h1`：姓名或昵称。
-- `biography`：个人简介，每段使用 `<p>内容</p>`。
-- `contact`：联系方式与个人链接。
-- `portrait-slot`：需要添加照片时，移除该元素的 `hidden` 属性，并放入 `<img src="./photo.jpg" alt="个人照片">`，将照片放在同目录。
-- `news-list`：个人动态。
-- `research-list`：论文或研究项目。
+照片位于 `assets/portrait.jpg`，版式在 `styles.css` 中调整。保留图片的替代文字和宽高属性。
 
-例如，News 中的一组真实动态可以使用：
+2026 年 10 月的更新依据个人提供的最新简历，已发表论文另以 CVF 正式论文核对。两篇在投稿件标为 `Under review`；署名采用简写，不提供尚未确认的公开稿件链接。Innovator 作为参与项目展示。
 
-```html
-<div class="news-group">
-  <div class="news-year">2026</div>
-  <ul><li>在这里填写你的动态。</li></ul>
-</div>
-```
+## 查看与发布
 
-Research 中的一项真实成果可以使用：
+双击 `index.html` 可预览。也可在本目录运行 `python -m http.server 8000`，访问 `http://localhost:8000`。
 
-```html
-<h3 class="research-year">2026</h3>
-<article class="publication">
-  <h3>论文或项目标题</h3>
-  <p>作者信息</p>
-  <p class="venue">发表信息</p>
-</article>
-```
-
-这些示例仅出现在说明文档中，没有添加到页面。
-
-## 查看与更新
-
-双击 `index.html` 可在浏览器中查看；或者在本目录运行 `python -m http.server 8000` 后访问 `http://localhost:8000`。
-
-提交更新至 GitHub 仓库的 `main` 分支后，GitHub Pages 会重新发布。发布源保持为 **Deploy from a branch → main → /(root)**。
+提交至 GitHub 仓库的 `main` 分支后，GitHub Pages 会重新发布。发布源为 **Deploy from a branch → main → /(root)**。
 
 ## 文件
 
 - `index.html`：页面结构与个人内容。
 - `styles.css`：布局与排版。
+- `assets/portrait.jpg`：个人照片。
 - `favicon.svg`：网页图标。
 - `.nojekyll`：静态页面标记。
 
-旧博客版本保留在 Git 提交历史中。
+旧版本保留在 Git 提交历史中。

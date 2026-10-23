@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="light" />
   <meta name="theme-color" content="#fbfbf8" />
-  <meta name="description" content="Chen3776's personal academic homepage." />
-  <title>Chen3776</title>
+  <meta name="description" content="Pengyi Chen is a master's student at Shanghai Jiao Tong University, working on efficient inference, sparse attention, and multimodal large language models." />
+  <title>Pengyi Chen | 陈鹏伊</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
@@ -14,32 +14,75 @@
   <main class="page">
     <header class="profile">
       <div class="profile-text">
-        <h1>Chen3776</h1>
+        <h1>Pengyi Chen <span lang="zh-CN">陈鹏伊</span></h1>
         <div class="biography">
-          <!-- 在这里添加个人简介，每一段使用 <p>...</p>。 -->
+          <p>I am a master's student in Information Engineering at Shanghai Jiao Tong University (SJTU), with expected graduation in March 2027. I received my bachelor's degree in Information Engineering (IEEE Class) from SJTU in June 2024.</p>
+          <p>My research focuses on efficient inference for large language and multimodal models, including sparse attention, long-context diffusion language models, and test-time token compression. I am interested in connecting algorithm design with efficient GPU implementations.</p>
+          <p>My research experience includes an internship at Alibaba's Taobao &amp; Tmall Group (November 2025–October 2026).</p>
         </div>
-        <p class="contact"><a href="https://github.com/Chen3776">GitHub</a></p>
+        <p class="contact"><a href="mailto:chenmuqiu@sjtu.edu.cn">chenmuqiu@sjtu.edu.cn</a><span aria-hidden="true"> · </span><a href="https://github.com/Chen3776">GitHub</a></p>
       </div>
-      <div class="portrait-slot" hidden>
-        <!-- 添加照片时移除上方的 hidden，再在这里放入 img 元素。 -->
+      <div class="portrait-slot">
+        <img src="./assets/portrait.jpg" alt="Pengyi Chen" width="156" height="200" />
       </div>
     </header>
 
     <section class="content-section" aria-labelledby="news-heading">
       <h2 id="news-heading">News</h2>
       <div class="news-list">
-        <!-- 动态内容暂时留空。 -->
+        <div class="news-group">
+          <div class="news-year">2025</div>
+          <ul>
+            <li>Joined Alibaba's Taobao &amp; Tmall Group as a research intern in November.</li>
+            <li>Our work on differential-informed sample selection was accepted to <a href="https://arxiv.org/abs/2507.12998">ICCV 2025</a>.</li>
+          </ul>
+        </div>
+        <div class="news-group">
+          <div class="news-year">2024</div>
+          <ul>
+            <li>Our team placed second in the MICCAI CXR-LT 2024 challenge.</li>
+            <li>Started my master's studies at SJTU in September.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <section class="content-section research-section" aria-labelledby="research-heading">
       <h2 id="research-heading">Research</h2>
       <div class="research-list">
-        <!-- 研究与论文内容暂时留空。 -->
+        <h3 class="research-year">Manuscripts</h3>
+        <article class="publication">
+          <h4>Structured Sparse Attention for Accelerating Long-Context Diffusion Language Models</h4>
+          <p><strong>Pengyi Chen</strong>, Feng Hong, Haoyun Jiang, et al.</p>
+          <p class="venue">Under review</p>
+          <p class="description">Structured attention patterns and cross-step index reuse for faster long-context diffusion inference, with a Triton implementation of block-sparse attention.</p>
+        </article>
+        <article class="publication">
+          <h4>Test-time Token Compression for MLLM Inference Acceleration</h4>
+          <p><strong>Pengyi Chen</strong>, Tianjie Dai, Xu Chen, et al.</p>
+          <p class="venue">Under review</p>
+          <p class="description">Task-adaptive visual token merging and selection, using the original model's outputs as self-supervision for test-time tuning.</p>
+        </article>
+
+        <h3 class="research-year">2025</h3>
+        <article class="publication">
+          <h4><a href="https://arxiv.org/abs/2507.12998">Differential-informed Sample Selection Accelerates Multimodal Contrastive Learning</a></h4>
+          <p>Zihua Zhao*, Feng Hong*, Mengxi Chen, <strong>Pengyi Chen</strong>, Benyuan Liu, Jiangchao Yao, Ya Zhang, Yanfeng Wang</p>
+          <p class="venue">ICCV 2025 · Poster</p>
+          <p class="description">DISSect selects informative training samples through changes in cross-modal similarity to accelerate multimodal contrastive learning.</p>
+          <p class="paper-links"><a href="https://openaccess.thecvf.com/content/ICCV2025/papers/Zhao_Differential-informed_Sample_Selection_Accelerates_Multimodal_Contrastive_Learning_ICCV_2025_paper.pdf">Paper</a> · <a href="https://github.com/MediaBrain-SJTU/DISSect">Code</a><span class="author-note">* Equal contribution</span></p>
+        </article>
+
+        <h3 class="research-year">Projects</h3>
+        <article class="publication">
+          <h4><a href="https://github.com/InnovatorLM/Innovator-VL">Innovator · Scientific Agent Tool-Use Framework</a></h4>
+          <p class="description">Contributed to the tool-use training framework for scientific language models. Built agent execution infrastructure with Docker sandboxes and asynchronous MCP services to support tools for science, mathematics, and coding.</p>
+          <p class="paper-links"><a href="https://github.com/InnovatorLM/Innovator-VL">Project repository</a></p>
+        </article>
       </div>
     </section>
 
-    <footer>© Chen3776</footer>
+    <footer>Updated in October 2026. © Pengyi Chen</footer>
   </main>
 </body>
 </html>
